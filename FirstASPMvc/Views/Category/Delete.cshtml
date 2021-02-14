@@ -1,3 +1,4 @@
+@model FirstASPMvc.Models.Category
 
 @{
     ViewData["Title"] = "Categorias";
@@ -5,9 +6,13 @@
 
 <h1>Deletar</h1>
 
-<p>
-    @* <a asp-page="Create">Create New</a> *@
-</p>
-<table class="table">
+<br>
 
-</table>
+<h4>Deseja deletar ? </h4>
+<form asp-action="Delete">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <p>@Model.Descricao</p>
+        <div class="form-group">
+            <input type="submit" value="Deletar" class="btn btn-primary" />
+        </div>
+</form>

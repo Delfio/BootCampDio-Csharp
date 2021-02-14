@@ -51,7 +51,6 @@ namespace FirstASPMvc.Controllers
         {
             if (ModelState.IsValid)
             {
-                Console.WriteLine("chegou");
                 this._context.Add(categoria);
                 await this._context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index)); // pq não jogar direto index?
